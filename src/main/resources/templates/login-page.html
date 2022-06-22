@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" >
+
+<body>
+
+
+<div class="container">
+    <form th:method="POST" th:action="@{/login}">
+        <h2>Please sign in</h2>
+        <p>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Email" autocomplete="username" required autofocus>
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" autocomplete="current-password" required>
+        </p>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <div class="primary">&nbsp;</div>
+        <div class="alert alert-info" role="alert">
+            <p><b>Using</b><br/>
+                admin@mail.com : admin<br/></p>
+            <p><b>or</b><br/>
+                user@mail.com : user<br/></p>
+        </div>
+    </form>
+</div>
+</body>
+</html>
